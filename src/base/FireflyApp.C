@@ -3,6 +3,7 @@
 #include "AppFactory.h"
 #include "ModulesApp.h"
 #include "MooseSyntax.h"
+#include "ActionFactory.h"
 
 InputParameters
 FireflyApp::validParams()
@@ -30,6 +31,8 @@ FireflyApp::registerAll(Factory & f, ActionFactory & af, Syntax & syntax)
   Registry::registerActionsTo(af, {"FireflyApp"});
 
   /* register custom execute flags, action syntax, etc. here */
+
+  registerSyntax("FireflyAction", "Firefly");
 }
 
 void
