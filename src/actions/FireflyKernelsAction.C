@@ -1,28 +1,27 @@
-#include "FireflyAction.h"
+#include "FireflyKernelsAction.h"
 #include "Factory.h"
 #include "Parser.h"
 #include "FEProblem.h"
 
-registerMooseAction("FireflyApp", FireflyAction, "add_kernel");
+registerMooseAction("FireflyApp", FireflyKernelsAction, "add_kernel");
 
 template <>
 InputParameters
-validParams<FireflyAction>()
+validParams<FireflyKernelsAction>()
 {
   InputParameters params = validParams<Action>();
   params.addRequiredParam<std::vector<NonlinearVariableName>>("variables",
     "variable names to use for the photochemistry variables");
   params.addRequiredParam<RealVectorValue>("light_direction", "light direction");
-  // params.addRequiredParam<MaterialProperty<Real>>("photoinitiator_diffusivity", "photoinitiator diffusivity");
   return params;
 }
 
-FireflyAction::FireflyAction(InputParameters params)
+FireflyKernelsAction::FireflyKernelsAction(InputParameters params)
   : Action(params)
 {}
 
 void
-FireflyAction::act()
+FireflyKernelsAction::act()
 {
   std::vector<NonlinearVariableName> variables =
     getParam<std::vector<NonlinearVariableName>>("variables");

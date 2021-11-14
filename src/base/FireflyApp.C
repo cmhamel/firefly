@@ -32,7 +32,10 @@ FireflyApp::registerAll(Factory & f, ActionFactory & af, Syntax & syntax)
 
   /* register custom execute flags, action syntax, etc. here */
 
-  registerSyntax("FireflyAction", "Firefly");
+  registerSyntax("FireflyKerenelsAction", "FireflyKernels");
+  registerSyntax("FireflyADKernelsAction", "FireflyADKernels");
+  registerSyntax("FireflyICAction", "FireflyICs");
+
 }
 
 void
