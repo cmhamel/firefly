@@ -1,6 +1,6 @@
 #include "FireflyPixelArrayBC.h"
 registerMooseObject("FireflyApp", FireflyPixelArrayBC);
-defineLegacyParams(FireflyPixelArrayBC);
+//defineLegacyParams(FireflyPixelArrayBC);
 
 InputParameters
 FireflyPixelArrayBC::validParams()

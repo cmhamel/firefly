@@ -2,11 +2,14 @@
 #include <math.h>
 registerMooseObject("FireflyApp", FireflyADPhotoPolymer);
 
-template <>
+//template <>
+//InputParameters
+//validParams<FireflyADPhotoPolymer>()
 InputParameters
-validParams<FireflyADPhotoPolymer>()
+FireflyADPhotoPolymer::validParams()
 {
-  InputParameters params = validParams<ADMaterial>();
+  //InputParameters params = validParams<ADMaterial>();
+  InputParameters params = ADMaterial::validParams();
   params.addRequiredParam<Real>("alpha_I", "photoinitiator absorption");
   params.addRequiredParam<Real>("A_absorber", "photoabsorber absorption");
   params.addRequiredParam<Real>("A_monomer", "monomer absorption");

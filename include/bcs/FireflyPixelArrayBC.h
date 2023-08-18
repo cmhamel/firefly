@@ -4,8 +4,8 @@
 
 class FireflyPixelArrayBC;
 
-template <>
-InputParameters validParams<FireflyPixelArrayBC>();
+//template <>
+//InputParameters validParams<FireflyPixelArrayBC>();
 
 // class FireflyPixelArrayBC : public IntegratedBC
 class FireflyPixelArrayBC : public NodalBC

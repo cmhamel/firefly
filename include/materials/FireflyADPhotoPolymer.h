@@ -3,13 +3,14 @@
 
 class FireflyADPhotoPolymer;
 
-template <>
-InputParameters validParams<FireflyADPhotoPolymer>();
+//template <>
+//InputParameters validParams<FireflyADPhotoPolymer>();
 
 class FireflyADPhotoPolymer : public ADMaterial
 {
 public:
   FireflyADPhotoPolymer(const InputParameters & parameters);
+  static InputParameters validParams();  
 
 protected:
   virtual void computeQpProperties() override;
